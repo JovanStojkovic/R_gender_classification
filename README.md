@@ -17,3 +17,27 @@ R packages used:
 - `tensorflow`
 - `dplyr`
 - `readxl`
+
+## Important Note on File Paths
+
+The current code assumes that the dataset is stored in the following path on the author's local machine:
+
+/Users/jovanstojkovic/Desktop/Masinsko ucenje Kupusinac/Projekat/gender_classification.xlsx
+
+
+Since file paths are specific to the local machine, you will need to modify the path in the code to match the location of the dataset on your machine.
+
+To load the dataset, change the following line in the code:
+
+```r
+file_path <- "/path/to/your/dataset/gender_classification.xlsx"
+my_data <- read_excel("/path/to/your/dataset/gender_classification.xlsx")
+
+Make sure the dataset file is located in the specified path, or update the path accordingly.
+
+Alternatively, you can use a relative file path if you want to keep the dataset and the code together in the same directory:
+
+r
+Copy
+Edit
+my_data <- read_excel("gender_classification.xlsx")
